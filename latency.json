@@ -1,0 +1,17 @@
+{
+  "requests": 2000,
+  "components": {
+    "p50_ms": 0.4045880000376201,
+    "p95_ms": 0.47929989999602185,
+    "p99_ms": 0.6378218600229956,
+    "mean_ms": 0.4150719694947611,
+    "throughput_per_sec_single_core": 2409.2207460244354
+  },
+  "asgi_end_to_end": {
+    "p50_ms": 1.3091809998968529,
+    "p95_ms": 1.9188191500575158,
+    "p99_ms": 2.1003716199220435,
+    "mean_ms": 1.3924833065012763
+  },
+  "note": "single shared CPU core in the build container; expect lower on dedicated hardware"
+}
