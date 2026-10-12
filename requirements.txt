@@ -1,0 +1,9 @@
+# Training + evaluation (versions this repo was tested with)
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+lightgbm==4.7.0
+scipy==1.17.1
+joblib==1.5.3
+matplotlib==3.10.8
+optuna==5.0.0

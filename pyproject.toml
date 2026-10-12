@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinel-fraud"
+version = "1.0.0"
+description = "Cost-aware, real-time card fraud detection with explainability, serving and drift monitoring"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scikit-learn", "lightgbm", "scipy", "joblib", "matplotlib", "optuna"]
+
+[project.optional-dependencies]
+serve = ["fastapi", "uvicorn", "pydantic", "redis", "httpx"]
+dev = ["pytest", "fakeredis", "ruff", "shap"]
+demo = ["streamlit"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::UserWarning"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = ["E701", "E702", "E731"]   # compact one-liners are deliberate in scripts
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*" = ["E402"]
+"demo/*" = ["E402"]

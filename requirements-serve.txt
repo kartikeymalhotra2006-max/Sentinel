@@ -1,0 +1,11 @@
+# Minimal runtime for the scoring API (what the Docker image installs)
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+lightgbm==4.7.0
+scipy==1.17.1
+joblib==1.5.3
+fastapi==0.143.0
+uvicorn==0.54.0
+pydantic==2.14.0
+redis==8.1.0
